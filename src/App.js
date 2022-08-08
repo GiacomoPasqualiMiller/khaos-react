@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import React from "react";
+import { BrowserRouter, Routes ,Route} from 'react-router-dom';
+
+//Pages Import
+import Home from "./components/Home";
+import IronMan from "./components/IronMan";
+import CapitanMarvel from './components/CapitanMarvel';
+import BlackPanter from './components/BlackPanter';
+import Wanda from './components/Wanda';
+import RegoleGenerali from './components/RegoleGenerali';
+
+const App =() =>  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/iron-man" element={<IronMan />} />
+        <Route path="/capitan-marvel" element={<CapitanMarvel />} />
+        <Route path="/black-panter" element={<BlackPanter />} />
+        <Route path="/wanda" element={<Wanda />} />
+        <Route path="/regole-generali" element={<RegoleGenerali />} />
+        
+      </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
