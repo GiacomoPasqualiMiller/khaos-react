@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7f503ff.css",
+    "main.js": "/static/js/main.db445af7.js",
+    "static/js/787.112b6843.chunk.js": "/static/js/787.112b6843.chunk.js",
+    "static/media/icon-black-panter.jpg": "/static/media/icon-black-panter.57e72215330df796db0d.jpg",
+    "static/media/card-ironman.png": "/static/media/card-ironman.3acf9daba051934a3396.png",
+    "static/media/icon-capitan-marvel.jpg": "/static/media/icon-capitan-marvel.fa0d2608315ef8046c82.jpg",
+    "static/media/iron-man.jpg": "/static/media/iron-man.c70f399b5c9c602dd87a.jpg",
+    "static/media/icon-iron-man.jpg": "/static/media/icon-iron-man.2ef796d664ccc16c9e65.jpg",
+    "static/media/icon-wanda.jpg": "/static/media/icon-wanda.e749636ee8e5d543f58a.jpg",
+    "index.html": "/index.html",
+    "main.c7f503ff.css.map": "/static/css/main.c7f503ff.css.map",
+    "main.db445af7.js.map": "/static/js/main.db445af7.js.map",
+    "787.112b6843.chunk.js.map": "/static/js/787.112b6843.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7f503ff.css",
+    "static/js/main.db445af7.js"
+  ]
+}
