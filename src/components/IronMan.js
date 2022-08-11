@@ -50,6 +50,21 @@ const IronMan = () => {
     fetchData();
   }, []);
 
+  //IMG ZOOM
+  const [imgClick, setImgClick] = useState(false);
+  const handleClick = () => {
+    setImgClick(!imgClick);
+  };
+  const closeClick = () => {
+    setImgClick(false);
+  };
+
+  //IRON MAN EFFECT
+  const [ironFly, setIronFly]= useState(false)
+  const handleFly = () => {
+    setIronFly(true);
+  };
+
   return (
     <>
       <html lang="en" className="dark">
@@ -141,6 +156,7 @@ const IronMan = () => {
                   </h3>
                   <img
                     id="iron"
+
                     src={require("../images/card-ironman.png")}
                     alt=""
                     className="transition-all mt-20 duration-1000 scroll-none"
@@ -167,7 +183,7 @@ const IronMan = () => {
                     alt=""
                     height="500"
                     className="flex w-full rounded-xl animate-pulse"
-                    /* onclick={showModal("images/iron-man.jpg")} */
+                    onClick={() => handleClick()}
                   />
                 </div>
               </div>
@@ -177,22 +193,25 @@ const IronMan = () => {
           {/* <!-- The Modal --> */}
           <div
             id="modal"
-            /* style={{ display: closeModalValue ? "flex" : "hidden" }} */
-            className="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 justify-center items-center"
+            style={{ display: imgClick ? "flex" : "none" }}
+            className="absolute top-0 left-0 z-80 w-screen h-screen bg-black/70 justify-center items-center"
           >
             {/* <!-- The close button --> */}
             <a
+              style={{ display: imgClick ? "flex" : "hidden" }}
               className="fixed z-90 top-6 right-8 text-white text-5xl font-bold"
               href="javascript:void(0)"
-              /*  onclick={closeModal()} */
+              onClick={() => closeClick()}
             >
               &times;
             </a>
 
             {/* <!-- A big image will be displayed here --> */}
             <img
+              style={{ display: imgClick ? "flex" : "none" }}
               id="modal-img"
               className="max-w-[800px] max-h-[600px] object-cover"
+              src={require("../images/iron-man.jpg")}
             />
           </div>
         </body>
